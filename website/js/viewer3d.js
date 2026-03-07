@@ -106,8 +106,8 @@ class GymRollerViewer {
     keyLight.shadow.bias = -0.001;
     this.scene.add(keyLight);
 
-    // Rim light — electric yellow-green accent (matches CSS --accent)
-    const rimLight = new THREE.DirectionalLight(0xd4ff00, 0.7);
+    // Rim light — orange accent (matches CSS --accent)
+    const rimLight = new THREE.DirectionalLight(0xff6600, 0.7);
     rimLight.position.set(-350, 80, -220);
     this.scene.add(rimLight);
 
@@ -136,26 +136,26 @@ class GymRollerViewer {
 
     // ---- Materials ----
 
-    // EVA foam outer surface — dark charcoal, rough
+    // EVA foam outer surface — near-black, rough
     const foamMat = new THREE.MeshStandardMaterial({
-      color:     0x252530,
+      color:     0x1a1a1a,
       roughness: 0.88,
       metalness: 0.0,
     });
 
-    // End caps — slightly lighter, semi-matte
+    // End caps — dark, semi-matte
     const capMat = new THREE.MeshStandardMaterial({
-      color:     0x1a1a24,
+      color:     0x141414,
       roughness: 0.45,
       metalness: 0.08,
     });
 
-    // Accent — electric yellow-green grooves & zipper ring
+    // Accent — orange grooves & zipper ring
     const accentMat = new THREE.MeshStandardMaterial({
-      color:             0xd4ff00,
+      color:             0xff6600,
       roughness:         0.25,
       metalness:         0.15,
-      emissive:          0xd4ff00,
+      emissive:          0xff6600,
       emissiveIntensity: 0.12,
     });
 

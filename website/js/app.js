@@ -38,6 +38,8 @@ function boot() {
   initScrollAnimations();
   initSmoothScroll();
   initPreOrderForm();
+  initColorSwatches();
+  initFaq();
 }
 
 // =============================================================================
@@ -166,5 +168,67 @@ function initPreOrderForm() {
 
     // In production: submit to Formspree or your backend here
     // Example: fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: new FormData(form) })
+  });
+}
+
+// =============================================================================
+// 6. Color swatches — sync click → hidden select + active class + label
+// =============================================================================
+
+function initColorSwatches() {
+  const swatches   = document.querySelectorAll('.swatch');
+  const colorSelect = document.querySelector('[name="color"]');
+  const swatchLabel = document.getElementById('swatch-label');
+  if (!swatches.length || !colorSelect) return;
+
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      // Update active state
+      swatches.forEach(s => s.classList.remove('active'));
+      swatch.classList.add('active');
+
+      // Sync hidden select
+      colorSelect.value = swatch.dataset.value;
+
+      // Update label text
+      if (swatchLabel) {
+        swatchLabel.textContent = swatch.dataset.label || swatch.dataset.value;
+      }
+    });
+  });
+
+  // Activate first swatch on load
+  if (swatches[0]) swatches[0].click();
+}
+
+// =============================================================================
+// 7. FAQ accordion
+// =============================================================================
+
+function initFaq() {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer   = item.querySelector('.faq-answer');
+    if (!question || !answer) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      items.forEach(i => {
+        i.classList.remove('open');
+        const a = i.querySelector('.faq-answer');
+        if (a) a.style.maxHeight = null;
+      });
+
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
   });
 }

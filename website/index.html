@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GymRollerBag — The world's first foam roller that doubles as a gym bag. Roll out. Pack up. Go.">
-  <meta property="og:title" content="GymRollerBag — Roll. Pack. Go.">
-  <meta property="og:description" content="The foam roller that carries your whole gym. Therapeutic massage roller with integrated 3L storage and detachable backpack straps.">
+  <meta name="description" content="MOVE2THEMAX — The world's first foam roller with built-in storage. Roll, store your gear, and go. 3L waterproof interior, detachable backpack straps.">
+  <meta property="og:title" content="MOVE2THEMAX — Roll. Store. Perform.">
+  <meta property="og:description" content="The foam roller that carries your whole gym. 3L waterproof storage + detachable backpack straps built right in.">
   <meta property="og:type" content="website">
-  <title>GymRollerBag — Roll. Pack. Go.</title>
+  <title>MOVE2THEMAX — Roll. Store. Perform.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar">
-    <div class="nav-logo">Gym<span>Roller</span>Bag</div>
+    <div class="nav-logo">
+      <!-- M2TM Chevron Logo -->
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <polygon points="4,8 16,2 28,8 22,11 16,8 10,11" fill="#ff6600"/>
+        <polygon points="4,14 16,8 28,14 22,17 16,14 10,17" fill="#cc4400"/>
+        <polygon points="4,22 10,19 16,22 22,19 28,22 22,25 16,22 10,25" fill="#f2f2f5"/>
+      </svg>
+      <span class="logo-text">MOVE<span>2</span>THEMAX</span>
+    </div>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
+      <li><a href="#exploded">Technology</a></li>
       <li><a href="#specs">Specs</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
     </ul>
@@ -29,25 +38,48 @@
   <!-- ===== HERO ===== -->
   <section id="hero">
     <div class="hero-content">
-      <span class="label">Introducing GymRollerBag</span>
+      <span class="label">Introducing Move2TheMax</span>
       <h1>
-        Roll.<br>
-        Pack.<br>
-        <span class="accent">Go.</span>
+        ROLL.<br>
+        STORE.<br>
+        <span class="accent">PERFORM.</span>
       </h1>
       <p class="hero-tagline">
-        The world's first foam roller that doubles as a gym bag.
-        Therapeutic massage + 3L of storage + detachable backpack straps —
-        all in one 18" cylinder.
+        The world's first foam roller with built-in storage and backpack straps.
+        Therapeutic recovery + 3L waterproof interior — all in one rugged 18" cylinder.
       </p>
       <div class="hero-actions">
         <a href="#preorder" class="btn-primary">Pre-Order — $79</a>
-        <a href="#features" class="btn-secondary">See How It Works</a>
+        <a href="#use-cases" class="btn-secondary">See It In Action</a>
       </div>
     </div>
+    <div id="viewer-container" aria-label="Interactive 3D model of the Move2TheMax roller"></div>
+  </section>
 
-    <!-- Three.js viewer fills this container -->
-    <div id="viewer-container" aria-label="3D model of the GymRollerBag"></div>
+  <!-- ===== STATS BAR ===== -->
+  <section id="stats">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">18"</div>
+        <div class="stat-label">Full Length</div>
+        <div class="stat-sub">457 mm roller body</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3L</div>
+        <div class="stat-label">Storage</div>
+        <div class="stat-sub">Waterproof interior</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">45A</div>
+        <div class="stat-label">Shore Rating</div>
+        <div class="stat-sub">Pro-grade EVA foam</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">38mm</div>
+        <div class="stat-label">Strap Width</div>
+        <div class="stat-sub">Military-grade webbing</div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== FEATURES ===== -->
@@ -61,35 +93,178 @@
       <div class="features-grid">
 
         <div class="feature-card" data-animate>
-          <div class="feature-icon">🧘</div>
+          <div class="feature-icon">
+            <!-- Foam roller SVG icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="14" cy="14" rx="6" ry="13"/>
+              <line x1="8" y1="7" x2="20" y2="7"/>
+              <line x1="8" y1="10" x2="20" y2="10"/>
+              <line x1="8" y1="13" x2="20" y2="13"/>
+              <line x1="8" y1="16" x2="20" y2="16"/>
+              <line x1="8" y1="19" x2="20" y2="19"/>
+              <line x1="8" y1="22" x2="20" y2="22"/>
+            </svg>
+          </div>
           <h3>Full Foam Roller</h3>
           <p>
-            High-density EVA foam outer shell — identical texture and
-            firmness to premium standalone foam rollers. Roll IT bands,
-            quads, back, calves. It works exactly like a foam roller
-            because it <em>is</em> a foam roller.
+            High-density EVA foam outer shell at 45 Shore A — the same firmness as professional recovery rollers. Diamond-grip texture delivers targeted myofascial release on IT bands, quads, back, and calves.
           </p>
         </div>
 
         <div class="feature-card" data-animate>
-          <div class="feature-icon">👜</div>
-          <h3>Gym Bag Built In</h3>
+          <div class="feature-icon">
+            <!-- Open cylinder / storage SVG icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="14" cy="14" rx="6" ry="13"/>
+              <ellipse cx="14" cy="5" rx="6" ry="2.5" fill="none"/>
+              <path d="M8 5 L8 14" stroke-dasharray="2 2"/>
+              <path d="M20 5 L20 14" stroke-dasharray="2 2"/>
+              <path d="M11 9 L11 14 M14 8 L14 14 M17 9 L17 14" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>3L Storage Inside</h3>
           <p>
-            Twist off the end cap to reveal 3 liters of waterproof storage.
-            Pack a change of clothes, a towel, protein bars, or your
-            training gloves. The 210D nylon ripstop liner keeps everything
-            dry and fresh.
+            Twist off the end cap to reveal a 127mm waterproof compartment. Pack a water bottle, resistance bands, a change of clothes, or a small towel. Dual-start screw thread seals it tight in seconds.
           </p>
         </div>
 
         <div class="feature-card" data-animate>
-          <div class="feature-icon">🎒</div>
-          <h3>Wears as a Backpack</h3>
+          <div class="feature-icon">
+            <!-- Backpack straps SVG icon -->
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="14" cy="14" rx="6" ry="13"/>
+              <path d="M8 6 Q4 8 4 14 Q4 20 8 22"/>
+              <path d="M20 6 Q24 8 24 14 Q24 20 20 22"/>
+              <line x1="4" y1="14" x2="2" y2="14"/>
+              <line x1="24" y1="14" x2="26" y2="14"/>
+            </svg>
+          </div>
+          <h3>Backpack Ready</h3>
           <p>
-            Clip in the included 38mm nylon webbing straps to convert
-            in seconds. Padded shoulder straps distribute weight evenly
-            across both shoulders — hands free from gym to car to office.
+            Clip the included 38mm nylon webbing straps to the D-ring mounts at each end. Rides on your back like a pack — hands-free from gym floor to front door. Straps detach and stow inside when rolling.
           </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== USE-CASE PANELS ===== -->
+  <section id="use-cases">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Built for the whole day</span>
+        <h2>One tool, every scenario.</h2>
+      </div>
+      <div class="use-cases-grid">
+
+        <!-- Panel 1: Pre-Workout -->
+        <div class="use-case-panel">
+          <div class="use-case-label">Pre-Workout</div>
+          <h3>WARM UP.<br>ROLL OUT.</h3>
+          <p>Drop it on the floor before your session. Work through tight calves, quads, and IT bands with the same diamond-grip EVA surface used by professional athletes.</p>
+          <svg class="use-case-illustration" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Floor -->
+            <line x1="0" y1="100" x2="240" y2="100" stroke="#2a2a35" stroke-width="2"/>
+            <!-- Roller on floor -->
+            <ellipse cx="120" cy="88" rx="60" ry="14" fill="#1e1e28" stroke="#333344" stroke-width="1.5"/>
+            <rect x="60" y="74" width="120" height="14" fill="#1e1e28"/>
+            <ellipse cx="120" cy="74" rx="60" ry="14" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <!-- Groove lines -->
+            <line x1="80" y1="64" x2="80" y2="84" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="95" y1="62" x2="95" y2="86" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="110" y1="61" x2="110" y2="87" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="125" y1="61" x2="125" y2="87" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="140" y1="62" x2="140" y2="86" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="155" y1="64" x2="155" y2="84" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <!-- End caps -->
+            <ellipse cx="60" cy="74" rx="14" ry="14" fill="#1a1a24" stroke="#ff6600" stroke-width="1.5"/>
+            <ellipse cx="180" cy="74" rx="14" ry="14" fill="#1a1a24" stroke="#ff6600" stroke-width="1.5"/>
+            <!-- Chevron on cap -->
+            <polyline points="54,69 60,73 66,69" stroke="#ff6600" stroke-width="2" fill="none"/>
+            <polyline points="54,74 60,78 66,74" stroke="#cc4400" stroke-width="2" fill="none"/>
+            <!-- Leg silhouette pressing down -->
+            <path d="M100 60 Q115 40 130 35 Q145 32 150 50 Q155 65 140 70" stroke="#888899" stroke-width="2" fill="none"/>
+            <!-- Pressure arrows -->
+            <path d="M105 58 L105 72" stroke="#ff6600" stroke-width="1.5" marker-end="url(#arr)"/>
+            <path d="M120 56 L120 72" stroke="#ff6600" stroke-width="1.5" marker-end="url(#arr)"/>
+            <defs>
+              <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="6" orient="auto">
+                <path d="M0 0 L3 6 L6 0" fill="#ff6600"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Panel 2: Storage Inside -->
+        <div class="use-case-panel">
+          <div class="use-case-label">Storage Inside</div>
+          <h3>PACK IT.<br>SEAL IT.</h3>
+          <p>Twist off the end cap to access the 3L waterproof compartment. Everything you need for a full training day — secured with a dual-start screw thread and bayonet lock.</p>
+          <div class="storage-tags">
+            <span class="storage-tag">Water Bottle</span>
+            <span class="storage-tag">Massage Ball</span>
+            <span class="storage-tag">Resistance Band</span>
+            <span class="storage-tag">Towel</span>
+            <span class="storage-tag">Clothes</span>
+          </div>
+          <svg class="use-case-illustration" viewBox="0 0 240 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="margin-top: auto;">
+            <!-- Roller body (open) -->
+            <ellipse cx="90" cy="70" rx="55" ry="13" fill="#1e1e28" stroke="#333344" stroke-width="1.5"/>
+            <rect x="35" y="57" width="110" height="13" fill="#1e1e28"/>
+            <ellipse cx="90" cy="57" rx="55" ry="13" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <!-- Open end highlight -->
+            <ellipse cx="145" cy="57" rx="13" ry="13" fill="#111118" stroke="#ff6600" stroke-width="2"/>
+            <!-- Interior ring -->
+            <ellipse cx="145" cy="57" rx="9" ry="9" fill="none" stroke="#cc4400" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <!-- Cap floating off to the right -->
+            <ellipse cx="190" cy="57" rx="16" ry="16" fill="#1a1a24" stroke="#ff6600" stroke-width="2"/>
+            <polyline points="183,51 190,56 197,51" stroke="#ff6600" stroke-width="2.5" fill="none"/>
+            <polyline points="183,57 190,62 197,57" stroke="#cc4400" stroke-width="2.5" fill="none"/>
+            <!-- Arrow showing cap coming off -->
+            <path d="M172 57 L160 57" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arr2)"/>
+            <defs>
+              <marker id="arr2" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+                <path d="M6 0 L0 3 L6 6" fill="none" stroke="#ff6600" stroke-width="1.5"/>
+              </marker>
+            </defs>
+            <!-- Items going in -->
+            <circle cx="65" cy="30" r="8" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <rect x="100" y="22" width="6" height="16" rx="3" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <path d="M118 22 Q130 28 118 38" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <!-- Down arrows -->
+            <line x1="65" y1="40" x2="65" y2="55" stroke="#ff6600" stroke-width="1.2" opacity="0.7"/>
+            <line x1="103" y1="40" x2="103" y2="55" stroke="#ff6600" stroke-width="1.2" opacity="0.7"/>
+            <line x1="122" y1="42" x2="122" y2="55" stroke="#ff6600" stroke-width="1.2" opacity="0.7"/>
+          </svg>
+        </div>
+
+        <!-- Panel 3: On The Go -->
+        <div class="use-case-panel">
+          <div class="use-case-label">On The Go</div>
+          <h3>STRAP UP.<br>HEAD OUT.</h3>
+          <p>Clip the 38mm nylon webbing straps to the D-ring mounts at each end. Carries like a backpack — balanced weight, hands free, whether you're cycling, walking, or commuting.</p>
+          <svg class="use-case-illustration" viewBox="0 0 240 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Roller horizontal (as backpack) -->
+            <ellipse cx="120" cy="70" rx="13" ry="55" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <rect x="107" y="15" width="26" height="110" fill="#1e1e28"/>
+            <ellipse cx="120" cy="15" rx="13" ry="55" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <!-- Diamond texture dots -->
+            <circle cx="120" cy="30" r="1.5" fill="#ff6600" opacity="0.7"/>
+            <circle cx="120" cy="42" r="1.5" fill="#ff6600" opacity="0.7"/>
+            <circle cx="120" cy="54" r="1.5" fill="#ff6600" opacity="0.7"/>
+            <circle cx="120" cy="66" r="1.5" fill="#ff6600" opacity="0.7"/>
+            <circle cx="120" cy="78" r="1.5" fill="#ff6600" opacity="0.7"/>
+            <!-- D-rings at each end -->
+            <circle cx="120" cy="12" r="5" fill="none" stroke="#b0b0b8" stroke-width="2"/>
+            <circle cx="120" cy="118" r="5" fill="none" stroke="#b0b0b8" stroke-width="2"/>
+            <!-- Shoulder straps -->
+            <path d="M120 12 Q85 25 72 55 Q65 80 80 100 Q90 115 120 118" stroke="#888" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M120 12 Q155 25 168 55 Q175 80 160 100 Q150 115 120 118" stroke="#888" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Buckles -->
+            <rect x="67" y="68" width="10" height="6" rx="1" fill="none" stroke="#b0b0b8" stroke-width="1.5"/>
+            <rect x="163" y="68" width="10" height="6" rx="1" fill="none" stroke="#b0b0b8" stroke-width="1.5"/>
+          </svg>
         </div>
 
       </div>
@@ -102,8 +277,139 @@
       <span class="label">Interactive 3D Model</span>
       <h2>See it from every angle</h2>
       <p class="viewer-sub">Drag to rotate &nbsp;·&nbsp; Scroll to zoom</p>
-      <div id="viewer-full" aria-label="Interactive 3D view of GymRollerBag"></div>
-      <p class="viewer-hint">Model shown actual proportions — 18" long × 6" diameter</p>
+      <div id="viewer-full" aria-label="Interactive 3D view of Move2TheMax roller"></div>
+      <p class="viewer-hint">Actual proportions — 18" long × 6" diameter</p>
+    </div>
+  </section>
+
+  <!-- ===== EXPLODED DIAGRAM ===== -->
+  <section id="exploded">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Engineered to last</span>
+        <h2>Built like a thermos.<br>Rolls like a pro.</h2>
+      </div>
+
+      <div class="exploded-layout">
+        <!-- SVG Exploded Diagram -->
+        <div class="exploded-diagram-wrap">
+          <svg viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:420px;" aria-label="Exploded diagram of Move2TheMax roller components">
+            <!-- ===== LEFT CAP (fixed) ===== -->
+            <ellipse cx="52" cy="130" rx="20" ry="52" fill="#1a1a24" stroke="#333344" stroke-width="1.5"/>
+            <!-- Cap chevron -->
+            <polyline points="42,119 52,126 62,119" stroke="#ff6600" stroke-width="2.5" fill="none"/>
+            <polyline points="42,130 52,137 62,130" stroke="#cc4400" stroke-width="2.5" fill="none"/>
+
+            <!-- ===== ROLLER BODY (cutaway view) ===== -->
+            <!-- Full outer shell -->
+            <rect x="75" y="78" width="210" height="104" fill="#1e1e28"/>
+            <ellipse cx="75" cy="130" rx="20" ry="52" fill="#252530" stroke="#444455" stroke-width="1.5"/>
+            <ellipse cx="285" cy="130" rx="20" ry="52" fill="#252530" stroke="#444455" stroke-width="1.5"/>
+            <!-- Cutaway top half (lighter) -->
+            <rect x="75" y="78" width="210" height="52" fill="#252530" opacity="0.5"/>
+            <!-- Diamond texture lines on body -->
+            <line x1="110" y1="80" x2="110" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="135" y1="80" x2="135" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="160" y1="80" x2="160" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="185" y1="80" x2="185" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="210" y1="80" x2="210" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="235" y1="80" x2="235" y2="180" stroke="#333" stroke-width="1"/>
+            <line x1="260" y1="80" x2="260" y2="180" stroke="#333" stroke-width="1"/>
+            <!-- Inner ABS liner -->
+            <ellipse cx="75" cy="130" rx="14" ry="44" fill="none" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <ellipse cx="285" cy="130" rx="14" ry="44" fill="none" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <rect x="75" y="86" width="210" height="88" fill="none" stroke="#ff6600" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+            <!-- O-ring groove highlight -->
+            <ellipse cx="285" cy="130" rx="21" ry="53" fill="none" stroke="#ff6600" stroke-width="3" stroke-dasharray="2 4" opacity="0.8"/>
+
+            <!-- ===== RIGHT CAP (removable, separated) ===== -->
+            <!-- Gap line showing separation -->
+            <line x1="308" y1="88" x2="308" y2="172" stroke="#ff6600" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <ellipse cx="340" cy="130" rx="20" ry="52" fill="#1a1a24" stroke="#ff6600" stroke-width="2"/>
+            <!-- Thread detail on inside -->
+            <ellipse cx="340" cy="130" rx="14" ry="43" fill="none" stroke="#cc4400" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <!-- Cap chevron + M -->
+            <polyline points="330,119 340,126 350,119" stroke="#ff6600" stroke-width="2.5" fill="none"/>
+            <polyline points="330,130 340,137 350,130" stroke="#cc4400" stroke-width="2.5" fill="none"/>
+            <polyline points="330,140 334,148 340,143 346,148 350,140" stroke="#555566" stroke-width="2" fill="none"/>
+
+            <!-- ===== CALLOUT LINES ===== -->
+            <!-- 1: Dual-start screw thread (top right) -->
+            <circle cx="285" cy="105" r="3" fill="#ff6600"/>
+            <line x1="288" y1="103" x2="340" y2="58" stroke="#ff6600" stroke-width="1"/>
+            <line x1="340" y1="58" x2="420" y2="58" stroke="#ff6600" stroke-width="1"/>
+            <text x="344" y="55" font-family="Inter,sans-serif" font-size="10" fill="#ff6600" font-weight="700">① DUAL-START SCREW THREAD</text>
+
+            <!-- 2: Bayonet lock (mid right) -->
+            <circle cx="315" cy="130" r="3" fill="#ff6600"/>
+            <line x1="318" y1="130" x2="360" y2="100" stroke="#ff6600" stroke-width="1"/>
+            <line x1="360" y1="100" x2="420" y2="100" stroke="#ff6600" stroke-width="1"/>
+            <text x="364" y="97" font-family="Inter,sans-serif" font-size="10" fill="#ff6600" font-weight="700">② BAYONET LOCK + PIN</text>
+
+            <!-- 3: Sealing O-ring (right side) -->
+            <circle cx="292" cy="130" r="3" fill="#ff6600"/>
+            <line x1="295" y1="130" x2="360" y2="145" stroke="#ff6600" stroke-width="1"/>
+            <line x1="360" y1="145" x2="420" y2="145" stroke="#ff6600" stroke-width="1"/>
+            <text x="364" y="142" font-family="Inter,sans-serif" font-size="10" fill="#ff6600" font-weight="700">③ SEALING O-RING</text>
+
+            <!-- 4: Waterproof interior (center body) -->
+            <circle cx="180" cy="130" r="3" fill="#ff6600"/>
+            <line x1="183" y1="130" x2="420" y2="190" stroke="#ff6600" stroke-width="1"/>
+            <text x="300" y="205" font-family="Inter,sans-serif" font-size="10" fill="#ff6600" font-weight="700">④ 3L WATERPROOF INTERIOR</text>
+
+            <!-- 5: EVA foam shell (top left) -->
+            <circle cx="100" cy="82" r="3" fill="#ff6600"/>
+            <line x1="100" y1="79" x2="100" y2="40" stroke="#ff6600" stroke-width="1"/>
+            <line x1="100" y1="40" x2="0" y2="40" stroke="#ff6600" stroke-width="1"/>
+            <text x="0" y="37" font-family="Inter,sans-serif" font-size="10" fill="#ff6600" font-weight="700">⑤ EVA FOAM SHELL 45A</text>
+          </svg>
+        </div>
+
+        <!-- Callout list -->
+        <div class="exploded-callouts">
+
+          <div class="callout-item" data-animate>
+            <div class="callout-num">1</div>
+            <div>
+              <h4>Dual-Start Screw Thread</h4>
+              <p>Two-lead helical thread lets you open and seal the cap in less than one full rotation. No fumbling, even with gym gloves on.</p>
+            </div>
+          </div>
+
+          <div class="callout-item" data-animate>
+            <div class="callout-num">2</div>
+            <div>
+              <h4>Bayonet Lock with Locking Pin</h4>
+              <p>A positive-click bayonet mechanism ensures the cap can't accidentally twist off during a rolling session or while carrying.</p>
+            </div>
+          </div>
+
+          <div class="callout-item" data-animate>
+            <div class="callout-num">3</div>
+            <div>
+              <h4>Sealing O-Ring</h4>
+              <p>Silicone O-ring at the cap interface creates a water-resistant seal. Your gear stays dry through sweat, rain, and water bottle accidents.</p>
+            </div>
+          </div>
+
+          <div class="callout-item" data-animate>
+            <div class="callout-num">4</div>
+            <div>
+              <h4>3L Waterproof Interior</h4>
+              <p>127mm internal diameter with a 210D nylon ripstop liner. Holds a water bottle, resistance band, towel, and a change of clothes.</p>
+            </div>
+          </div>
+
+          <div class="callout-item" data-animate>
+            <div class="callout-num">5</div>
+            <div>
+              <h4>EVA Foam Shell, 45 Shore A</h4>
+              <p>The same high-density EVA foam used in professional-grade foam rollers. Compression set &lt;5% — it bounces back, every time.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
@@ -117,60 +423,129 @@
 
       <div class="specs-grid">
 
-        <div class="specs-table">
-          <h4>Dimensions</h4>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Length</span>
-            <span class="spec-value">18 in / 457 mm</span>
+        <div>
+          <div class="specs-table" style="margin-bottom: 1.5rem;">
+            <h4>Dimensions</h4>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Length</span>
+              <span class="spec-value">18 in / 457 mm</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Outer diameter</span>
+              <span class="spec-value">6 in / 152 mm</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Storage diameter</span>
+              <span class="spec-value">5 in / 127 mm</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Wall thickness</span>
+              <span class="spec-value">0.5 in / 12.7 mm</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Storage capacity</span>
+              <span class="spec-value">~3.0 L</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Weight (empty)</span>
+              <span class="spec-value">~1.1 kg / 2.4 lb</span>
+            </div>
           </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Diameter</span>
-            <span class="spec-value">6 in / 152 mm</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Storage capacity</span>
-            <span class="spec-value">~3.0 L</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Wall thickness</span>
-            <span class="spec-value">0.5 in / 12.7 mm</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Weight (empty)</span>
-            <span class="spec-value">~1.1 kg / 2.4 lb</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Max carry weight</span>
-            <span class="spec-value">15 kg / 33 lb</span>
+
+          <div class="specs-table">
+            <h4>Materials</h4>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Outer shell</span>
+              <span class="spec-value">EVA foam, 45 Shore A</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Inner liner</span>
+              <span class="spec-value">ABS tube, 3mm wall</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Storage liner</span>
+              <span class="spec-value">210D nylon ripstop</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">End cap closure</span>
+              <span class="spec-value">Dual-start thread + bayonet</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Seal</span>
+              <span class="spec-value">Silicone O-ring</span>
+            </div>
+            <div class="spec-row" data-animate>
+              <span class="spec-label">Straps &amp; hardware</span>
+              <span class="spec-value">38mm nylon + anodized Al</span>
+            </div>
           </div>
         </div>
 
-        <div class="specs-table">
-          <h4>Materials</h4>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Outer shell</span>
-            <span class="spec-value">EVA foam, 45 Shore A</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Inner liner</span>
-            <span class="spec-value">ABS tube, 3mm wall</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Storage liner</span>
-            <span class="spec-value">210D nylon ripstop</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">End caps</span>
-            <span class="spec-value">ABS/PETG (3D printed)</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Zipper</span>
-            <span class="spec-value">YKK #10 Aquaguard</span>
-          </div>
-          <div class="spec-row" data-animate>
-            <span class="spec-label">Straps &amp; hardware</span>
-            <span class="spec-value">38mm nylon + anodized Al</span>
-          </div>
+        <!-- Cross-section diagram -->
+        <div class="cross-section-wrap">
+          <h4>Cross-Section View</h4>
+          <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px;" aria-label="Cross-section diagram showing roller layers">
+            <!-- Layer 4: Storage space (center) -->
+            <circle cx="150" cy="150" r="52" fill="#0a0a0c" stroke="#111118" stroke-width="1"/>
+            <text x="150" y="146" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#606070" font-weight="600">3L STORAGE</text>
+            <text x="150" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#404050">waterproof</text>
+
+            <!-- Layer 3: Nylon ripstop liner -->
+            <circle cx="150" cy="150" r="58" fill="none" stroke="#2a3a4a" stroke-width="10"/>
+            <!-- Nylon label -->
+            <text x="150" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#888899">210D NYLON RIPSTOP</text>
+
+            <!-- Layer 2: ABS inner liner -->
+            <circle cx="150" cy="150" r="66" fill="none" stroke="#333344" stroke-width="6"/>
+            <!-- ABS label right -->
+            <line x1="216" y1="150" x2="235" y2="135" stroke="#555566" stroke-width="1"/>
+            <text x="237" y="133" font-family="Inter,sans-serif" font-size="8.5" fill="#888899">ABS LINER</text>
+            <text x="237" y="143" font-family="Inter,sans-serif" font-size="8" fill="#606070">3mm wall</text>
+
+            <!-- Layer 1: EVA foam outer -->
+            <circle cx="150" cy="150" r="76" fill="none" stroke="#1e1e28" stroke-width="20"/>
+            <!-- EVA foam texture dots -->
+            <circle cx="150" cy="74" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="204" cy="96" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="226" cy="150" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="204" cy="204" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="150" cy="226" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="96" cy="204" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="74" cy="150" r="2.5" fill="#ff6600" opacity="0.5"/>
+            <circle cx="96" cy="96" r="2.5" fill="#ff6600" opacity="0.5"/>
+
+            <!-- Outer circle -->
+            <circle cx="150" cy="150" r="76" fill="none" stroke="#333344" stroke-width="1.5"/>
+
+            <!-- Dimension lines -->
+            <!-- OD: 152mm -->
+            <line x1="74" y1="256" x2="226" y2="256" stroke="#ff6600" stroke-width="1" marker-start="url(#dimL)" marker-end="url(#dimR)"/>
+            <text x="150" y="268" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#ff6600" font-weight="700">152mm OD</text>
+
+            <!-- ID: 127mm -->
+            <line x1="84" y1="245" x2="216" y2="245" stroke="#888899" stroke-width="1"/>
+            <text x="150" y="243" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#888899">127mm ID</text>
+
+            <!-- Wall: 12.7mm callout -->
+            <line x1="226" y1="150" x2="246" y2="150" stroke="#ff6600" stroke-width="1" stroke-dasharray="2 2"/>
+            <line x1="216" y1="150" x2="246" y2="150" stroke="#ff6600" stroke-width="1" opacity="0.4"/>
+            <text x="248" y="153" font-family="Inter,sans-serif" font-size="8" fill="#ff6600">12.7mm</text>
+            <text x="248" y="163" font-family="Inter,sans-serif" font-size="8" fill="#606070">wall</text>
+
+            <!-- EVA foam label left -->
+            <line x1="74" y1="150" x2="30" y2="120" stroke="#ff6600" stroke-width="1"/>
+            <text x="0" y="117" font-family="Inter,sans-serif" font-size="8.5" fill="#ff6600" font-weight="700">EVA FOAM</text>
+            <text x="0" y="127" font-family="Inter,sans-serif" font-size="8" fill="#606070">45 Shore A</text>
+
+            <defs>
+              <marker id="dimL" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto">
+                <path d="M6 0 L0 3 L6 6" fill="none" stroke="#ff6600" stroke-width="1"/>
+              </marker>
+              <marker id="dimR" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0 0 L6 3 L0 6" fill="none" stroke="#ff6600" stroke-width="1"/>
+              </marker>
+            </defs>
+          </svg>
         </div>
 
       </div>
@@ -182,38 +557,87 @@
     <div class="container">
       <span class="label">Simple by design</span>
       <h2>Three moves. Done.</h2>
-      <p>From the floor to the door in under 60 seconds.</p>
+      <p>Floor to door in under 60 seconds.</p>
 
       <div class="steps-grid">
 
         <div class="step" data-animate>
+          <!-- Step 1 illustration: rolling -->
+          <svg class="step-illustration" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="0" y1="85" x2="160" y2="85" stroke="#2a2a35" stroke-width="1.5"/>
+            <ellipse cx="80" cy="73" rx="10" ry="38" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <rect x="70" y="35" width="20" height="38" fill="#1e1e28"/>
+            <ellipse cx="80" cy="35" rx="10" ry="38" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <line x1="72" y1="26" x2="72" y2="80" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="78" y1="24" x2="78" y2="82" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="84" y1="24" x2="84" y2="82" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <line x1="90" y1="26" x2="90" y2="80" stroke="#ff6600" stroke-width="1.2" opacity="0.6"/>
+            <path d="M55 60 Q65 40 75 35 Q85 32 90 48" stroke="#888899" stroke-width="1.8" fill="none"/>
+            <path d="M62 58 L62 72" stroke="#ff6600" stroke-width="1.2"/>
+            <path d="M72 56 L72 72" stroke="#ff6600" stroke-width="1.2"/>
+            <path d="M80 55 L80 72" stroke="#ff6600" stroke-width="1.2"/>
+            <!-- Rolling arrows -->
+            <path d="M30 73 Q30 55 45 55" stroke="#ff6600" stroke-width="1.5" fill="none" marker-end="url(#ra)"/>
+            <path d="M130 73 Q130 55 115 55" stroke="#ff6600" stroke-width="1.5" fill="none" marker-end="url(#ra2)"/>
+            <defs>
+              <marker id="ra" markerWidth="5" markerHeight="5" refX="5" refY="2.5" orient="auto"><path d="M0 0 L5 2.5 L0 5" fill="#ff6600"/></marker>
+              <marker id="ra2" markerWidth="5" markerHeight="5" refX="0" refY="2.5" orient="auto"><path d="M5 0 L0 2.5 L5 5" fill="#ff6600"/></marker>
+            </defs>
+          </svg>
           <div class="step-number">1</div>
           <h3>Roll</h3>
-          <p>
-            Use it like any foam roller — press into tight muscles,
-            work through knots. The high-density EVA surface gives you
-            the firm, consistent pressure your body needs.
-          </p>
+          <p>Drop it on the floor and work through tight muscles. 45 Shore A EVA foam delivers firm, consistent pressure — no heat-up time, no batteries, no charging.</p>
         </div>
 
         <div class="step" data-animate>
+          <!-- Step 2 illustration: packing -->
+          <svg class="step-illustration" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="65" cy="55" rx="40" ry="10" fill="#1e1e28" stroke="#333344" stroke-width="1.5"/>
+            <rect x="25" y="45" width="80" height="10" fill="#1e1e28"/>
+            <ellipse cx="65" cy="45" rx="40" ry="10" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <ellipse cx="105" cy="45" rx="10" ry="10" fill="#111118" stroke="#ff6600" stroke-width="1.5"/>
+            <ellipse cx="105" cy="45" rx="7" ry="7" fill="none" stroke="#cc4400" stroke-width="1" stroke-dasharray="2 2"/>
+            <!-- Cap off to right -->
+            <ellipse cx="138" cy="45" rx="13" ry="13" fill="#1a1a24" stroke="#ff6600" stroke-width="1.5"/>
+            <polyline points="131,39 138,44 145,39" stroke="#ff6600" stroke-width="2" fill="none"/>
+            <polyline points="131,45 138,50 145,45" stroke="#cc4400" stroke-width="2" fill="none"/>
+            <!-- Arrow showing separation -->
+            <path d="M118 45 L126 45" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <!-- Items going in -->
+            <rect x="48" y="20" width="5" height="14" rx="2.5" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <circle cx="65" cy="20" r="5" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <path d="M78 18 Q85 22 78 30" fill="none" stroke="#888899" stroke-width="1.5"/>
+            <line x1="50" y1="36" x2="50" y2="44" stroke="#ff6600" stroke-width="1.2"/>
+            <line x1="65" y1="27" x2="65" y2="44" stroke="#ff6600" stroke-width="1.2"/>
+            <line x1="80" y1="32" x2="80" y2="44" stroke="#ff6600" stroke-width="1.2"/>
+          </svg>
           <div class="step-number">2</div>
-          <h3>Pack</h3>
-          <p>
-            Twist off the end cap, slide in your clothes, cap it back.
-            The threaded lock keeps it sealed tight — no spills, no
-            smells escaping, no zipper fumbling.
-          </p>
+          <h3>Store</h3>
+          <p>Twist off the end cap in one half-turn. Load your gear into the 3L waterproof compartment. Seal it back — the dual-start thread clicks tight in seconds.</p>
         </div>
 
         <div class="step" data-animate>
+          <!-- Step 3 illustration: carrying -->
+          <svg class="step-illustration" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="80" cy="50" rx="10" ry="42" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <rect x="70" y="8" width="20" height="84" fill="#1e1e28"/>
+            <ellipse cx="80" cy="8" rx="10" ry="42" fill="#252530" stroke="#333344" stroke-width="1.5"/>
+            <line x1="74" y1="15" x2="74" y2="83" stroke="#ff6600" stroke-width="1" opacity="0.5"/>
+            <line x1="80" y1="13" x2="80" y2="85" stroke="#ff6600" stroke-width="1" opacity="0.5"/>
+            <line x1="86" y1="15" x2="86" y2="83" stroke="#ff6600" stroke-width="1" opacity="0.5"/>
+            <!-- D-rings -->
+            <circle cx="80" cy="7" r="4" fill="none" stroke="#b0b0b8" stroke-width="1.5"/>
+            <circle cx="80" cy="93" r="4" fill="none" stroke="#b0b0b8" stroke-width="1.5"/>
+            <!-- Shoulder straps -->
+            <path d="M80 7 Q50 20 40 45 Q32 65 45 82 Q55 92 80 93" stroke="#888" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M80 7 Q110 20 120 45 Q128 65 115 82 Q105 92 80 93" stroke="#888" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Buckles -->
+            <rect x="36" y="56" width="8" height="5" rx="1" fill="none" stroke="#b0b0b8" stroke-width="1.2"/>
+            <rect x="116" y="56" width="8" height="5" rx="1" fill="none" stroke="#b0b0b8" stroke-width="1.2"/>
+          </svg>
           <div class="step-number">3</div>
-          <h3>Go</h3>
-          <p>
-            Clip in the shoulder straps and sling it on your back.
-            Or carry it under one arm like a classic roller. Either way,
-            you look like you know what you're doing.
-          </p>
+          <h3>Perform</h3>
+          <p>Clip the D-ring straps and head out. Walk, bike, commute — the roller distributes weight evenly across both shoulders. Straps stow inside when rolling.</p>
         </div>
 
       </div>
@@ -226,36 +650,33 @@
       <div class="preorder-inner">
         <span class="label">Early Access — Limited Units</span>
         <h2>Reserve yours today</h2>
-        <p>
-          Join the founding batch. Pre-order ships in 90 days.
-          Full refund if you change your mind before fulfillment.
-        </p>
+        <p>Join the founding batch. Ships in 90 days. Full refund if you change your mind before fulfilment.</p>
 
         <form class="preorder-form" id="preorder-form" action="#" method="POST">
-          <div class="form-row">
-            <input
-              type="text"
-              name="name"
-              class="form-input"
-              placeholder="Your name"
-              required
-            >
-            <input
-              type="email"
-              name="email"
-              class="form-input"
-              placeholder="your@email.com"
-              required
-            >
+
+          <!-- Color swatches -->
+          <div>
+            <div class="color-swatches-label">Choose your color</div>
+            <div class="color-swatches">
+              <button type="button" class="swatch active" data-color="matte-black" style="--c:#1a1a1a" title="Matte Black" aria-label="Matte Black"></button>
+              <button type="button" class="swatch" data-color="slate-grey" style="--c:#5a5a6a" title="Slate Grey" aria-label="Slate Grey"></button>
+              <button type="button" class="swatch" data-color="arctic-white" style="--c:#e0e0e8" title="Arctic White" aria-label="Arctic White"></button>
+              <button type="button" class="swatch" data-color="signal-orange" style="--c:#ff6600" title="Signal Orange" aria-label="Signal Orange"></button>
+              <span class="swatch-name" id="swatch-name">Matte Black</span>
+            </div>
           </div>
 
-          <select name="color" class="form-select">
-            <option value="" disabled selected>Choose your color</option>
-            <option value="matte-black">Matte Black (most popular)</option>
+          <select name="color" id="color-select" class="form-select" style="display:none">
+            <option value="matte-black" selected>Matte Black</option>
             <option value="slate-grey">Slate Grey</option>
             <option value="arctic-white">Arctic White</option>
-            <option value="electric-green">Electric Green</option>
+            <option value="signal-orange">Signal Orange</option>
           </select>
+
+          <div class="form-row">
+            <input type="text" name="name" class="form-input" placeholder="Your name" required>
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+          </div>
 
           <select name="quantity" class="form-select">
             <option value="1">1 unit — $79</option>
@@ -263,34 +684,117 @@
             <option value="3">3 units — $219 (save $18)</option>
           </select>
 
-          <button type="submit" class="btn-submit">
-            Reserve My GymRollerBag →
-          </button>
+          <!-- Trust badges -->
+          <div class="trust-badges">
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1L1 4v4c0 3.5 2.9 6.8 7 8 4.1-1.2 7-4.5 7-8V4L8 1z"/></svg>
+              Ships in 90 days
+            </span>
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.3 5.3l-4 4a1 1 0 01-1.4 0l-2-2a1 1 0 011.4-1.4L7 8.6l3.3-3.3a1 1 0 011.4 1.4z"/></svg>
+              Full refund before ship
+            </span>
+            <span class="trust-badge">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M5 1h6l2 3v2H3V4L5 1zm-2 6h10v7a1 1 0 01-1 1H4a1 1 0 01-1-1V7z"/></svg>
+              No charge until shipping
+            </span>
+          </div>
 
-          <p class="preorder-note">
-            No charge until shipping. Cancel anytime. Ships to US &amp; Canada.
-          </p>
+          <button type="submit" class="btn-submit">Reserve My MOVE2THEMAX →</button>
+
+          <p class="preorder-note">Ships to US &amp; Canada. Cancel anytime before dispatch.</p>
         </form>
 
         <div class="form-success" id="form-success" role="alert">
-          You're on the list! We'll email you with shipping updates.
+          You're on the list! We'll email you when your MOVE2THEMAX ships.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Got questions?</span>
+        <h2>Frequently asked.</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Does it actually work as a real foam roller?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Yes — the outer shell is made from 45 Shore A high-density EVA foam, which is the same material and hardness specification used in professional recovery rollers by physiotherapists and sports teams. The diamond-grip texture targets muscle tissue the same way any quality foam roller does. There's no compromise on the rolling performance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much can I actually fit inside?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>The interior is 127mm wide and approximately 400mm deep — about 3 litres. That's enough for a standard water bottle (lying on its side), a resistance band, a small towel, and a lightweight change of clothes. It won't replace a full gym bag, but it covers everything you need for a training session or commute.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How does the end cap stay closed during a session?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>The removable cap uses a dual-start helical thread combined with a bayonet lock and a silicone O-ring seal. One half-turn threads the cap on, then a quarter-turn engages the bayonet lock — a positive-click mechanism that prevents the cap rotating open under the vibration of rolling. The O-ring keeps moisture out.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Are the backpack straps included?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Yes. Every unit ships with two 38mm nylon webbing shoulder straps with ITW side-release buckles and tri-glide adjusters. The straps clip to anodized aluminum D-rings mounted at each end cap. When you want to roll, the straps detach in two clicks and stow inside the compartment.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can I take it on a plane?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>At 18" (457mm) long and 6" (152mm) in diameter, it fits in most overhead bins and under seats on regional aircraft. It's within carry-on size limits for most major airlines. The sealed compartment keeps your gear compact and TSA-friendly — no spills, no loose items.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-logo">Gym<span>Roller</span>Bag</div>
-    <p>&copy; 2024 MoveToTheMax. All rights reserved.</p>
+    <div class="footer-logo">
+      <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <polygon points="4,8 16,2 28,8 22,11 16,8 10,11" fill="#ff6600"/>
+        <polygon points="4,14 16,8 28,14 22,17 16,14 10,17" fill="#cc4400"/>
+        <polygon points="4,22 10,19 16,22 22,19 28,22 22,25 16,22 10,25" fill="#f2f2f5"/>
+      </svg>
+      <span class="logo-text">MOVE<span>2</span>THEMAX</span>
+    </div>
+    <p>&copy; 2024 Move2TheMax. All rights reserved.</p>
     <ul class="footer-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#specs">Specs</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#preorder">Pre-Order</a></li>
     </ul>
   </footer>
 
-  <!-- Three.js must load before viewer3d.js and app.js -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js" defer></script>
   <script src="js/viewer3d.js" defer></script>
