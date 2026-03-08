@@ -34,7 +34,7 @@
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#specs">Specs</a></li>
         <li><a href="#materials">Materials</a></li>
-        <li><a href="#3d-print">3D Print</a></li>
+        <li><a href="#print-section">3D Print</a></li>
       </ul>
       <a href="#order" class="btn btn-primary nav-cta">Pre-Order $89</a>
       <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
@@ -46,7 +46,7 @@
       <a href="#how-it-works">How It Works</a>
       <a href="#specs">Specs</a>
       <a href="#materials">Materials</a>
-      <a href="#3d-print">3D Print</a>
+      <a href="#print-section">3D Print</a>
       <a href="#order" class="btn btn-primary">Pre-Order $89</a>
     </div>
   </nav>
@@ -88,6 +88,113 @@
       <div class="hero-model fade-in delay-200">
         <div id="canvas-hero-container">
           <canvas id="canvas-hero"></canvas>
+
+          <!-- Static SVG fallback (hidden once Three.js loads) -->
+          <div class="canvas-fallback" aria-hidden="true">
+            <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Glow background -->
+              <defs>
+                <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="#0066ff" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%"   stop-color="#2a3a52"/>
+                  <stop offset="100%" stop-color="#1c2535"/>
+                </linearGradient>
+                <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"   stop-color="#3380ff"/>
+                  <stop offset="100%" stop-color="#0052cc"/>
+                </linearGradient>
+                <linearGradient id="strapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#0a0f18"/>
+                  <stop offset="100%" stop-color="#1c2535"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Background glow -->
+              <ellipse cx="210" cy="210" rx="180" ry="180" fill="url(#glow)"/>
+
+              <!-- ── ROLLER BODY (perspective 3/4 view) ── -->
+              <!-- Main tube shadow -->
+              <ellipse cx="212" cy="308" rx="168" ry="18" fill="#000" opacity="0.25"/>
+
+              <!-- Rear end cap -->
+              <ellipse cx="60" cy="205" rx="20" ry="55" fill="url(#capGrad)" opacity="0.7"/>
+              <!-- Rear cap ring -->
+              <ellipse cx="60" cy="205" rx="23" ry="58" fill="none" stroke="#3380ff" stroke-width="2" opacity="0.6"/>
+
+              <!-- Roller body top face -->
+              <path d="M60 150 Q210 120 360 150 L360 260 Q210 290 60 260 Z" fill="url(#bodyGrad)" stroke="#2a3a52" stroke-width="1"/>
+
+              <!-- Foam ridges (vertical lines on body) -->
+              <line x1="90"  y1="147" x2="90"  y2="263" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="120" y1="143" x2="120" y2="267" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="150" y1="140" x2="150" y2="270" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="180" y1="138" x2="180" y2="272" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="210" y1="137" x2="210" y2="273" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="240" y1="138" x2="240" y2="272" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="270" y1="140" x2="270" y2="270" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="300" y1="143" x2="300" y2="267" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+              <line x1="330" y1="147" x2="330" y2="263" stroke="#141d2b" stroke-width="3" opacity="0.8"/>
+
+              <!-- Zipper seam (silver line along top) -->
+              <path d="M65 158 Q210 130 355 158" stroke="#a8b4c4" stroke-width="2.5" fill="none"/>
+              <!-- Zipper teeth -->
+              <path d="M65 158 Q210 130 355 158" stroke="#c8d4e0" stroke-width="1" fill="none" stroke-dasharray="6 4" opacity="0.8"/>
+
+              <!-- Zipper pull tab (left) -->
+              <rect x="60" y="152" width="12" height="8" rx="2" fill="#a8b4c4"/>
+              <!-- Zipper pull tab (right) -->
+              <rect x="346" y="152" width="12" height="8" rx="2" fill="#a8b4c4"/>
+
+              <!-- Front end cap -->
+              <ellipse cx="360" cy="205" rx="20" ry="55" fill="url(#capGrad)"/>
+              <!-- Front cap ring -->
+              <ellipse cx="360" cy="205" rx="23" ry="58" fill="none" stroke="#3380ff" stroke-width="2.5"/>
+              <!-- Cap center detail -->
+              <ellipse cx="360" cy="205" rx="10" ry="28" fill="#0052cc" opacity="0.5"/>
+
+              <!-- Body bottom curve -->
+              <path d="M60 260 Q210 290 360 260" fill="none" stroke="#1a2840" stroke-width="2"/>
+
+              <!-- ── SHOULDER STRAPS ── -->
+              <!-- Left strap -->
+              <path d="M120 152 Q108 100 115 58 Q118 40 130 38 Q142 36 148 55 Q155 75 148 130 Q145 148 140 155"
+                    stroke="url(#strapGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+              <!-- Right strap -->
+              <path d="M280 152 Q292 100 285 58 Q282 40 270 38 Q258 36 252 55 Q245 75 252 130 Q255 148 260 155"
+                    stroke="url(#strapGrad)" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+              <!-- Strap highlight -->
+              <path d="M120 152 Q108 100 115 58 Q118 40 130 38" stroke="#2a3a52" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+              <path d="M280 152 Q292 100 285 58 Q282 40 270 38" stroke="#2a3a52" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+              <!-- Chest buckle -->
+              <rect x="165" y="82" width="90" height="14" rx="4" fill="#9eaabb"/>
+              <rect x="200" y="82" width="20" height="14" rx="2" fill="#7a8a9a"/>
+
+              <!-- D-rings at strap attachment points -->
+              <ellipse cx="120" cy="155" rx="8" ry="6" fill="none" stroke="#a8b4c4" stroke-width="2.5"/>
+              <ellipse cx="300" cy="155" rx="8" ry="6" fill="none" stroke="#a8b4c4" stroke-width="2.5"/>
+              <ellipse cx="140" cy="265" rx="8" ry="6" fill="none" stroke="#a8b4c4" stroke-width="2.5"/>
+              <ellipse cx="280" cy="265" rx="8" ry="6" fill="none" stroke="#a8b4c4" stroke-width="2.5"/>
+
+              <!-- ── LABELS ── -->
+              <line x1="360" y1="165" x2="395" y2="120" stroke="#0066ff" stroke-width="1" opacity="0.6"/>
+              <text x="398" y="118" fill="#0066ff" font-size="10" font-family="Inter,sans-serif" font-weight="600">END CAP (TPU)</text>
+
+              <line x1="210" y1="133" x2="210" y2="105" stroke="#a8b4c4" stroke-width="1" opacity="0.6"/>
+              <text x="165" y="100" fill="#a8b4c4" font-size="10" font-family="Inter,sans-serif" font-weight="600">YKK ZIPPER</text>
+
+              <line x1="148" y1="90" x2="115" y2="70" stroke="#f0f4f8" stroke-width="1" opacity="0.5"/>
+              <text x="20" y="68" fill="#f0f4f8" font-size="10" font-family="Inter,sans-serif" font-weight="600">STRAP</text>
+
+              <!-- Product name watermark -->
+              <text x="210" y="390" fill="#0066ff" font-size="13" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle" opacity="0.5">RollPack — 36" × 6" Foam Roller Bag</text>
+            </svg>
+          </div>
+
           <div class="model-controls">
             <button id="btnToggleBag" class="btn btn-accent">Open Bag</button>
             <span class="model-hint">Drag to rotate · Scroll to zoom</span>
@@ -334,6 +441,62 @@
         <div class="specs-model-wrap fade-in delay-200">
           <div id="canvas-specs-container">
             <canvas id="canvas-specs"></canvas>
+            <!-- Static SVG fallback (hidden once Three.js loads) -->
+            <div class="canvas-fallback canvas-fallback--small" aria-hidden="true">
+              <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="glowS" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%"   stop-color="#0066ff" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+                  </radialGradient>
+                  <linearGradient id="bodyGradS" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#2a3a52"/>
+                    <stop offset="100%" stop-color="#1c2535"/>
+                  </linearGradient>
+                  <linearGradient id="capGradS" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3380ff"/>
+                    <stop offset="100%" stop-color="#0052cc"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="160" cy="160" rx="140" ry="140" fill="url(#glowS)"/>
+                <!-- Shadow -->
+                <ellipse cx="162" cy="240" rx="128" ry="14" fill="#000" opacity="0.2"/>
+                <!-- Rear cap -->
+                <ellipse cx="46" cy="158" rx="16" ry="42" fill="url(#capGradS)" opacity="0.7"/>
+                <!-- Body -->
+                <path d="M46 116 Q160 92 274 116 L274 200 Q160 224 46 200 Z" fill="url(#bodyGradS)" stroke="#2a3a52" stroke-width="1"/>
+                <!-- Ridges -->
+                <line x1="70"  y1="113" x2="70"  y2="203" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="95"  y1="110" x2="95"  y2="206" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="120" y1="107" x2="120" y2="209" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="160" y1="105" x2="160" y2="211" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="200" y1="107" x2="200" y2="209" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="225" y1="110" x2="225" y2="206" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <line x1="250" y1="113" x2="250" y2="203" stroke="#141d2b" stroke-width="2.5" opacity="0.8"/>
+                <!-- Zipper -->
+                <path d="M50 122 Q160 99 270 122" stroke="#a8b4c4" stroke-width="2" fill="none"/>
+                <path d="M50 122 Q160 99 270 122" stroke="#c8d4e0" stroke-width="1" fill="none" stroke-dasharray="5 4" opacity="0.7"/>
+                <!-- Zipper pulls -->
+                <rect x="44" y="117" width="9" height="6" rx="1.5" fill="#a8b4c4"/>
+                <rect x="265" y="117" width="9" height="6" rx="1.5" fill="#a8b4c4"/>
+                <!-- Front cap -->
+                <ellipse cx="274" cy="158" rx="16" ry="42" fill="url(#capGradS)"/>
+                <ellipse cx="274" cy="158" rx="18" ry="45" fill="none" stroke="#3380ff" stroke-width="2"/>
+                <ellipse cx="274" cy="158" rx="8"  ry="22" fill="#0052cc" opacity="0.45"/>
+                <!-- Bottom -->
+                <path d="M46 200 Q160 224 274 200" fill="none" stroke="#1a2840" stroke-width="1.5"/>
+                <!-- Straps -->
+                <path d="M93 116 Q84 78 88 46 Q90 32 100 30 Q110 28 114 44 Q118 62 113 104 Q111 113 108 118" stroke="#0a0f18" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <path d="M214 116 Q223 78 219 46 Q217 32 207 30 Q197 28 193 44 Q189 62 194 104 Q196 113 199 118" stroke="#0a0f18" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <!-- Chest buckle -->
+                <rect x="126" y="62" width="68" height="11" rx="3" fill="#9eaabb"/>
+                <!-- D-rings -->
+                <ellipse cx="93"  cy="119" rx="6" ry="5" fill="none" stroke="#a8b4c4" stroke-width="2"/>
+                <ellipse cx="227" cy="119" rx="6" ry="5" fill="none" stroke="#a8b4c4" stroke-width="2"/>
+                <!-- Label -->
+                <text x="160" y="295" fill="#0066ff" font-size="10" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle" opacity="0.6">RollPack 3D Spec View</text>
+              </svg>
+            </div>
           </div>
           <p class="specs-model-hint">Interactive 3D Model — drag to rotate</p>
         </div>
@@ -428,7 +591,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════ 3D PRINT -->
-  <section id="3d-print">
+  <section id="print-section">
     <div class="section-inner">
       <div class="section-header fade-in">
         <span class="section-tag">Open-Source Hardware</span>

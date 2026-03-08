@@ -345,7 +345,25 @@ section { padding: 100px 0; }
   box-shadow: var(--glow);
 }
 
-#canvas-hero { width: 100%; height: 100%; display: block; }
+#canvas-hero { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
+
+/* Fallback illustration shown until Three.js initialises */
+.canvas-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+.canvas-fallback svg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.canvas-fallback--small { padding: 12px; }
 
 .model-controls {
   position: absolute;
@@ -526,6 +544,7 @@ section { padding: 100px 0; }
 }
 
 #canvas-specs-container {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
@@ -534,7 +553,7 @@ section { padding: 100px 0; }
               var(--surface-3);
   border: 1px solid var(--border);
 }
-#canvas-specs { width: 100%; height: 100%; display: block; }
+#canvas-specs { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
 
 .specs-model-hint {
   text-align: center;
@@ -611,7 +630,7 @@ section { padding: 100px 0; }
 /* ══════════════════════════════════════════════════════════════════════
    3D PRINT
    ══════════════════════════════════════════════════════════════════════ */
-#3d-print { background: var(--surface); }
+#print-section { background: var(--surface); }
 
 .print-grid {
   display: grid;
