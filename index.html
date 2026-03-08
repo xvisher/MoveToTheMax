@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RollPack — The World's First Foam Roller Backpack</title>
+  <meta name="description" content="RollPack combines a professional-grade full-size foam roller with an 8L gym bag you can wear as a backpack. One product. Total freedom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        RollPack
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#3d-print">3D Print</a></li>
+      </ul>
+      <a href="#order" class="btn btn-primary nav-cta">Pre-Order $89</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#specs">Specs</a>
+      <a href="#materials">Materials</a>
+      <a href="#3d-print">3D Print</a>
+      <a href="#order" class="btn btn-primary">Pre-Order $89</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════ HERO -->
+  <section id="hero">
+    <div class="hero-grid">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Now Taking Pre-Orders
+        </div>
+        <h1>The World's First<br /><span class="gradient-text">Foam Roller Backpack</span></h1>
+        <p class="hero-sub">
+          Roll out your muscles. Unzip the bag. Pack your gym gear and go.
+          RollPack is a full-size professional foam roller <em>and</em> an 8L carry bag with backpack straps — one sleek product for total gym freedom.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>36"</strong>
+            <span>Full Length</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>8L</strong>
+            <span>Storage</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>2.1 lbs</strong>
+            <span>Lightweight</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-primary btn-lg">Pre-Order Now — $89</a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+      </div>
+      <div class="hero-model fade-in delay-200">
+        <div id="canvas-hero-container">
+          <canvas id="canvas-hero"></canvas>
+          <div class="model-controls">
+            <button id="btnToggleBag" class="btn btn-accent">Open Bag</button>
+            <span class="model-hint">Drag to rotate · Scroll to zoom</span>
+          </div>
+          <div class="model-label" id="modelLabel">Foam Roller Mode</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+    <div class="hero-bg-grid"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ FEATURES -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-tag">Why RollPack</span>
+        <h2>Everything You Need.<br />One Product.</h2>
+        <p>Stop carrying a separate foam roller case. RollPack is both the roller and the bag — engineered for people who take recovery seriously.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="24" cy="24" rx="8" ry="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 24 Q4 24 4 16 Q4 8 12 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M32 24 Q44 24 44 16 Q44 8 36 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Full-Size Foam Roller</h3>
+          <p>Standard 36" × 6" dimensions match every professional foam roller. EPP foam exterior delivers deep-tissue pressure.</p>
+        </div>
+
+        <div class="feature-card fade-in delay-100">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="18" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M18 18V14a6 6 0 0 1 12 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M22 28v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="27" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>8L Storage Bag</h3>
+          <p>The hollow interior fits a full change of clothes, shoes, towel, and accessories. Secured by dual YKK waterproof zippers.</p>
+        </div>
+
+        <div class="feature-card fade-in delay-200">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8 Q16 24 16 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M32 8 Q32 24 32 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 12 Q24 6 32 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 22 Q20 26 24 24 Q28 22 32 26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M18 38 Q24 44 30 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Wearable as Backpack</h3>
+          <p>1.5" padded nylon shoulder straps and a chest buckle distribute weight evenly. Detach them when rolling.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 24 Q8 12 24 12 Q40 12 40 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="8" cy="24" r="2.5" fill="currentColor"/>
+              <circle cx="40" cy="24" r="2.5" fill="currentColor"/>
+              <path d="M14 24 L34 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+            </svg>
+          </div>
+          <h3>Dual YKK Zippers</h3>
+          <p>Water-resistant YKK #8 coil zippers rated for 50,000+ cycles. Open from either end for quick access.</p>
+        </div>
+
+        <div class="feature-card fade-in delay-100">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M24 10 V6M24 38 V42M10 24 H6M38 24 H42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Detachable Straps</h3>
+          <p>Quick-release buckles let you remove the shoulder straps in seconds. Use as a duffle, backpack, or bare roller.</p>
+        </div>
+
+        <div class="feature-card fade-in delay-200">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18 L24 8 L42 18 L42 38 L6 38 Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M16 38 L16 26 Q16 22 24 22 Q32 22 32 26 L32 38" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Carry-On Compliant</h3>
+          <p>At 36" × 6", it fits in most airline overhead bins and passes standard carry-on size checks.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-tag">Simple by Design</span>
+        <h2>Three Modes.<br />One Product.</h2>
+        <p>Switch between modes in seconds — no separate bags, no extra gear.</p>
+      </div>
+      <div class="steps-container">
+        <div class="steps-line"></div>
+
+        <div class="step fade-in">
+          <div class="step-number">01</div>
+          <div class="step-visual step-roll">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="60" cy="40" rx="50" ry="22" stroke="#0066ff" stroke-width="2" fill="#0066ff11"/>
+              <ellipse cx="60" cy="40" rx="14" ry="22" stroke="#0066ff" stroke-width="2"/>
+              <path d="M20 40 Q14 40 14 34 Q14 28 20 28" stroke="#0066ff" stroke-width="2" stroke-linecap="round"/>
+              <path d="M100 40 Q106 40 106 34 Q106 28 100 28" stroke="#0066ff" stroke-width="2" stroke-linecap="round"/>
+              <!-- ridges -->
+              <line x1="35" y1="18" x2="35" y2="62" stroke="#0066ff44" stroke-width="1.5"/>
+              <line x1="50" y1="18" x2="50" y2="62" stroke="#0066ff44" stroke-width="1.5"/>
+              <line x1="70" y1="18" x2="70" y2="62" stroke="#0066ff44" stroke-width="1.5"/>
+              <line x1="85" y1="18" x2="85" y2="62" stroke="#0066ff44" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Roll</h3>
+            <p>Use RollPack like any professional foam roller. The ridged EPP foam exterior delivers deep-tissue myofascial release.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in delay-200">
+          <div class="step-number">02</div>
+          <div class="step-visual step-unzip">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="60" cy="40" rx="50" ry="22" stroke="#00d4ff" stroke-width="2" fill="#00d4ff11"/>
+              <path d="M10 40 L110 40" stroke="#00d4ff" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <!-- zipper pull -->
+              <rect x="52" y="35" width="8" height="10" rx="2" fill="#00d4ff" opacity="0.8"/>
+              <!-- open gap indicator -->
+              <path d="M10 40 Q60 28 110 40" stroke="#00d4ff44" stroke-width="1.5" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Unzip</h3>
+            <p>Pull the dual YKK zippers open along the full 36" length. The bag opens to reveal the 8L storage compartment inside.</p>
+          </div>
+        </div>
+
+        <div class="step fade-in delay-400">
+          <div class="step-number">03</div>
+          <div class="step-visual step-pack">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="60" cy="40" rx="50" ry="22" stroke="#7c3aed" stroke-width="2" fill="#7c3aed11"/>
+              <!-- straps -->
+              <path d="M40 18 Q40 5 60 5 Q80 5 80 18" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M42 62 Q42 75 60 75 Q78 75 78 62" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+              <!-- buckle -->
+              <rect x="54" y="2" width="12" height="6" rx="2" fill="#7c3aed" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="step-content">
+            <h3>Pack &amp; Carry</h3>
+            <p>Zip it up, clip on the padded straps, and wear it as a backpack. Hands-free to the gym, the office, or the trail.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ SPECS -->
+  <section id="specs">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-tag">Technical Specifications</span>
+        <h2>Built to Pro Standards</h2>
+        <p>Every measurement and material choice was made with serious gym-goers in mind.</p>
+      </div>
+      <div class="specs-layout">
+        <div class="specs-table-wrap fade-in">
+          <table class="specs-table">
+            <tbody>
+              <tr>
+                <td class="spec-label">Length</td>
+                <td class="spec-value">36 in / 91.4 cm</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Diameter</td>
+                <td class="spec-value">6 in / 15.2 cm</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Storage Volume</td>
+                <td class="spec-value">8 L (approx.)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Weight (empty)</td>
+                <td class="spec-value">2.1 lbs / 0.95 kg</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Max Load</td>
+                <td class="spec-value">25 lbs / 11.3 kg</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Roller Material</td>
+                <td class="spec-value">EPP Foam (High Density)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Bag Shell</td>
+                <td class="spec-value">600D Polyester + 1000D Nylon reinf.</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Zipper</td>
+                <td class="spec-value">Dual YKK #8 Coil, Water-Resistant</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Strap Width</td>
+                <td class="spec-value">1.5 in / 38 mm</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Strap Padding</td>
+                <td class="spec-value">6mm EVA Foam, Mesh-Covered</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Hardware</td>
+                <td class="spec-value">Plastic Ladder-Lock + Steel D-Rings</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Colors</td>
+                <td class="spec-value">Charcoal Black, Midnight Blue, Storm Grey</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Warranty</td>
+                <td class="spec-value">2 Years</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="specs-model-wrap fade-in delay-200">
+          <div id="canvas-specs-container">
+            <canvas id="canvas-specs"></canvas>
+          </div>
+          <p class="specs-model-hint">Interactive 3D Model — drag to rotate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ MATERIALS -->
+  <section id="materials">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-tag">Premium Materials</span>
+        <h2>Built to Last.<br />Built to Perform.</h2>
+        <p>We chose every component for durability, performance, and real-world gym use.</p>
+      </div>
+      <div class="materials-grid">
+
+        <div class="material-card fade-in">
+          <div class="material-badge">Roller Core</div>
+          <h3>EPP Foam</h3>
+          <p class="material-subtitle">Expanded Polypropylene</p>
+          <p>The highest-density roller foam available. Maintains shape under repeated heavy use, delivers consistent therapeutic pressure, and resists compression fatigue.</p>
+          <ul class="material-specs">
+            <li>Density: 60–90 kg/m³</li>
+            <li>Shore Hardness: ~50D</li>
+            <li>Temperature resistant: −20°C to 80°C</li>
+          </ul>
+        </div>
+
+        <div class="material-card fade-in delay-100">
+          <div class="material-badge">Bag Shell</div>
+          <h3>600D Polyester</h3>
+          <p class="material-subtitle">+ 1000D Nylon Reinforcement</p>
+          <p>Industry-standard 600D polyester resists abrasion, dries quickly, and costs 30% less than equivalent nylon — while 1000D nylon reinforces all high-stress corners and strap attachment points.</p>
+          <ul class="material-specs">
+            <li>Weight: ~220 gsm</li>
+            <li>Abrasion resistance: ASTM D4966</li>
+            <li>Water-repellent DWR coating</li>
+          </ul>
+        </div>
+
+        <div class="material-card fade-in delay-200">
+          <div class="material-badge">Closure</div>
+          <h3>YKK #8 Zippers</h3>
+          <p class="material-subtitle">Dual Coil, Water-Resistant</p>
+          <p>The global gold standard in zipper hardware. Rated for 50,000+ open/close cycles with a water-repellent finish that keeps your gear dry in light rain or spills.</p>
+          <ul class="material-specs">
+            <li>Tape: Polyester weave</li>
+            <li>Slider: Zinc alloy, black nickel finish</li>
+            <li>Two pulls for open-from-either-end</li>
+          </ul>
+        </div>
+
+        <div class="material-card fade-in">
+          <div class="material-badge">Carry System</div>
+          <h3>EVA-Padded Straps</h3>
+          <p class="material-subtitle">1.5" Nylon Webbing</p>
+          <p>Heavy-duty 1.5" nylon webbing shoulder straps with 6mm closed-cell EVA foam padding, covered in breathable 3D spacer mesh to reduce sweat and hot spots.</p>
+          <ul class="material-specs">
+            <li>Strap width: 38mm / 1.5 in</li>
+            <li>Padding: 6mm EVA foam</li>
+            <li>Load rated to 25 lbs / 11.3 kg</li>
+          </ul>
+        </div>
+
+        <div class="material-card fade-in delay-100">
+          <div class="material-badge">Hardware</div>
+          <h3>Ladder-Lock Buckles</h3>
+          <p class="material-subtitle">+ Steel D-Rings</p>
+          <p>Polypropylene ladder-lock buckles for strap length adjustment and quick-release. Stainless steel D-rings at all four strap attachment points provide industrial-grade security.</p>
+          <ul class="material-specs">
+            <li>Buckle: PP, rated 80 kg</li>
+            <li>D-rings: 304 stainless steel</li>
+            <li>Quick-release: &lt; 2 second detach</li>
+          </ul>
+        </div>
+
+        <div class="material-card fade-in delay-200">
+          <div class="material-badge">3D-Printed</div>
+          <h3>TPU End Caps</h3>
+          <p class="material-subtitle">Thermoplastic Polyurethane</p>
+          <p>Custom-designed TPU end caps protect the roller ends, conceal strap attachment hardware, and provide additional grip. Printable at home on any direct-drive FDM printer.</p>
+          <ul class="material-specs">
+            <li>Material: TPU 95A Shore</li>
+            <li>Diameter: 152mm</li>
+            <li>Print temp: 230°C nozzle / 60°C bed</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ 3D PRINT -->
+  <section id="3d-print">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <span class="section-tag">Open-Source Hardware</span>
+        <h2>3D Print Your<br />Custom Components</h2>
+        <p>RollPack ships with all hardware, but we publish free 3D-printable designs for custom end caps, strap brackets, and zipper pulls so you can repair, customize, or upgrade at home.</p>
+      </div>
+      <div class="print-grid">
+
+        <div class="print-card fade-in">
+          <div class="print-render end-cap-render">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="48" stroke="#0066ff" stroke-width="2" fill="#0066ff0d"/>
+              <circle cx="60" cy="60" r="32" stroke="#0066ff" stroke-width="1.5" fill="#0066ff1a"/>
+              <circle cx="60" cy="60" r="18" stroke="#0066ff" stroke-width="1.5" fill="#0066ff33"/>
+              <circle cx="60" cy="60" r="8" fill="#0066ff" opacity="0.7"/>
+              <!-- bolt holes -->
+              <circle cx="60" cy="22" r="3.5" fill="#0066ff55"/>
+              <circle cx="88" cy="38" r="3.5" fill="#0066ff55"/>
+              <circle cx="88" cy="82" r="3.5" fill="#0066ff55"/>
+              <circle cx="60" cy="98" r="3.5" fill="#0066ff55"/>
+              <circle cx="32" cy="82" r="3.5" fill="#0066ff55"/>
+              <circle cx="32" cy="38" r="3.5" fill="#0066ff55"/>
+            </svg>
+          </div>
+          <div class="print-info">
+            <h3>End Cap</h3>
+            <p>Protective circular caps for both roller ends. Press-fit design, no hardware needed.</p>
+            <div class="print-specs">
+              <div class="print-spec"><span>Material</span><strong>TPU 95A</strong></div>
+              <div class="print-spec"><span>Diameter</span><strong>152mm</strong></div>
+              <div class="print-spec"><span>Infill</span><strong>25%</strong></div>
+              <div class="print-spec"><span>Layer Height</span><strong>0.2mm</strong></div>
+              <div class="print-spec"><span>Nozzle Temp</span><strong>230°C</strong></div>
+              <div class="print-spec"><span>Bed Temp</span><strong>60°C</strong></div>
+            </div>
+            <div class="print-qty">Qty needed: 2 per roller</div>
+          </div>
+        </div>
+
+        <div class="print-card fade-in delay-150">
+          <div class="print-render bracket-render">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- bracket shape -->
+              <rect x="20" y="40" width="80" height="40" rx="4" stroke="#00d4ff" stroke-width="2" fill="#00d4ff0d"/>
+              <rect x="30" y="50" width="18" height="20" rx="2" stroke="#00d4ff" stroke-width="1.5" fill="#00d4ff1a"/>
+              <rect x="72" y="50" width="18" height="20" rx="2" stroke="#00d4ff" stroke-width="1.5" fill="#00d4ff1a"/>
+              <!-- strap slot -->
+              <rect x="48" y="48" width="24" height="24" rx="3" stroke="#00d4ff" stroke-width="1.5" fill="#00d4ff33"/>
+              <!-- bolt holes -->
+              <circle cx="30" cy="30" r="4" stroke="#00d4ff" stroke-width="1.5" fill="none"/>
+              <circle cx="90" cy="30" r="4" stroke="#00d4ff" stroke-width="1.5" fill="none"/>
+              <circle cx="30" cy="90" r="4" stroke="#00d4ff" stroke-width="1.5" fill="none"/>
+              <circle cx="90" cy="90" r="4" stroke="#00d4ff" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <div class="print-info">
+            <h3>Strap Attachment Bracket</h3>
+            <p>Mounts onto the roller shell to secure D-ring hardware for the backpack straps.</p>
+            <div class="print-specs">
+              <div class="print-spec"><span>Material</span><strong>PETG</strong></div>
+              <div class="print-spec"><span>Dimensions</span><strong>80 × 40 × 12mm</strong></div>
+              <div class="print-spec"><span>Infill</span><strong>60%</strong></div>
+              <div class="print-spec"><span>Layer Height</span><strong>0.15mm</strong></div>
+              <div class="print-spec"><span>Nozzle Temp</span><strong>240°C</strong></div>
+              <div class="print-spec"><span>Bed Temp</span><strong>80°C</strong></div>
+            </div>
+            <div class="print-qty">Qty needed: 4 per roller</div>
+          </div>
+        </div>
+
+        <div class="print-card fade-in delay-300">
+          <div class="print-render pull-render">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- zipper pull tab shape -->
+              <path d="M40 55 L40 40 Q40 25 60 25 Q80 25 80 40 L80 55 Q80 70 60 72 Q40 70 40 55 Z" stroke="#7c3aed" stroke-width="2" fill="#7c3aed0d"/>
+              <path d="M50 50 L50 42 Q50 35 60 35 Q70 35 70 42 L70 50 Q70 58 60 59 Q50 58 50 50 Z" stroke="#7c3aed" stroke-width="1.5" fill="#7c3aed1a"/>
+              <!-- hole -->
+              <ellipse cx="60" cy="47" rx="6" ry="6" stroke="#7c3aed" stroke-width="1.5" fill="#7c3aed33"/>
+              <!-- cord hole -->
+              <ellipse cx="60" cy="85" rx="8" ry="12" stroke="#7c3aed" stroke-width="1.5" fill="#7c3aed1a"/>
+              <line x1="60" y1="72" x2="60" y2="73" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="print-info">
+            <h3>Zipper Pull</h3>
+            <p>Ergonomic pull tab for easy grip in cold or wet conditions. Fits standard YKK #8 slider.</p>
+            <div class="print-specs">
+              <div class="print-spec"><span>Material</span><strong>TPU 85A</strong></div>
+              <div class="print-spec"><span>Dimensions</span><strong>35 × 25 × 8mm</strong></div>
+              <div class="print-spec"><span>Infill</span><strong>40%</strong></div>
+              <div class="print-spec"><span>Layer Height</span><strong>0.2mm</strong></div>
+              <div class="print-spec"><span>Nozzle Temp</span><strong>220°C</strong></div>
+              <div class="print-spec"><span>Bed Temp</span><strong>50°C</strong></div>
+            </div>
+            <div class="print-qty">Qty needed: 2 per roller</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="print-download fade-in">
+        <div class="print-download-card">
+          <div>
+            <h3>Download All 3D Files</h3>
+            <p>Full specifications in JSON format — compatible with PrusaSlicer, Cura, and Bambu Studio.</p>
+          </div>
+          <a href="models/specs.json" download class="btn btn-primary">Download specs.json</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ ORDER -->
+  <section id="order">
+    <div class="section-inner">
+      <div class="order-card fade-in">
+        <div class="order-badge">Limited Launch Pricing</div>
+        <h2>Be First to Roll.</h2>
+        <p class="order-sub">Join the waitlist and lock in your early-bird price before we go to retail. First batch ships Q3 2026.</p>
+
+        <div class="order-price">
+          <span class="price-original">$129</span>
+          <span class="price-current">$89</span>
+          <span class="price-label">Early Bird Price</span>
+        </div>
+
+        <div class="order-includes">
+          <h4>What's Included:</h4>
+          <ul>
+            <li>✓ 1× RollPack (36" Full Size)</li>
+            <li>✓ Padded shoulder straps (pair)</li>
+            <li>✓ Chest buckle strap</li>
+            <li>✓ TPU end caps (3D printed)</li>
+            <li>✓ Microfiber carry pouch</li>
+            <li>✓ 2-Year warranty</li>
+            <li>✓ Free 3D print files download</li>
+          </ul>
+        </div>
+
+        <form class="order-form" id="orderForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+            <input type="email" name="email" placeholder="Email Address" required autocomplete="email" />
+          </div>
+          <div class="form-row">
+            <select name="color">
+              <option value="" disabled selected>Select Color</option>
+              <option value="charcoal">Charcoal Black</option>
+              <option value="blue">Midnight Blue</option>
+              <option value="grey">Storm Grey</option>
+            </select>
+            <select name="qty">
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full">Reserve My RollPack — $89</button>
+          <p class="form-note">No charge now. We'll email you when ready to ship.</p>
+        </form>
+
+        <div class="order-social-proof">
+          <div class="proof-avatars">
+            <div class="avatar">J</div>
+            <div class="avatar">M</div>
+            <div class="avatar">S</div>
+            <div class="avatar">R</div>
+            <div class="avatar">+</div>
+          </div>
+          <p>Join <strong>1,200+ people</strong> already on the waitlist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">⬡</span>
+          RollPack
+        </a>
+        <p>The world's first professional foam roller backpack. Built for athletes who don't want to carry two bags.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#specs">Specifications</a>
+          <a href="#materials">Materials</a>
+          <a href="#3d-print">3D Print Files</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Press Kit</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Warranty</a>
+          <a href="#">Returns</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 RollPack / MoveToTheMax. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter/X">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/roller3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

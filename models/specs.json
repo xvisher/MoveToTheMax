@@ -1,0 +1,195 @@
+{
+  "product": "RollPack — Gym Roller Bag",
+  "version": "1.0.0",
+  "date": "2026-03-08",
+  "description": "3D-printable component specifications for the RollPack hybrid foam roller backpack. These are accessory/hardware components only — the main roller body uses EPP foam, not FDM printing.",
+  "assembly_notes": "All components should be printed in the orientation shown (flat face down) to minimise supports. Use a brim for TPU parts. Acetone-smooth PETG brackets for best layer adhesion.",
+  "components": [
+    {
+      "id": "end-cap",
+      "name": "End Cap",
+      "description": "Circular end cap that press-fits onto each end of the RollPack roller. Provides impact protection, conceals the strap hardware insert points, and gives a clean finished look.",
+      "quantity_per_unit": 2,
+      "dimensions": {
+        "outer_diameter_mm": 152,
+        "inner_diameter_mm": 148,
+        "thickness_mm": 20,
+        "rim_depth_mm": 12,
+        "fit": "press-fit 0.3mm interference"
+      },
+      "material": {
+        "recommended": "TPU 95A",
+        "alternatives": ["TPU 85A (softer grip)", "PETG (rigid, less grip)"],
+        "color_suggestion": "Black or match bag shell color"
+      },
+      "print_settings": {
+        "infill_percent": 25,
+        "infill_pattern": "gyroid",
+        "layer_height_mm": 0.2,
+        "wall_count": 3,
+        "top_bottom_layers": 4,
+        "nozzle_temp_celsius": 230,
+        "bed_temp_celsius": 60,
+        "print_speed_mm_s": 20,
+        "cooling_fan_percent": 30,
+        "extruder": "direct drive required",
+        "support": false,
+        "brim_mm": 6
+      },
+      "estimated_print_time_minutes": 95,
+      "filament_usage_grams": 48
+    },
+    {
+      "id": "strap-bracket",
+      "name": "Strap Attachment Bracket",
+      "description": "PETG bracket that bonds to the exterior of the bag shell at the four strap connection points. Houses a 25mm D-ring and uses M4 threaded inserts for secure fastening.",
+      "quantity_per_unit": 4,
+      "dimensions": {
+        "length_mm": 80,
+        "width_mm": 40,
+        "height_mm": 12,
+        "slot_width_mm": 28,
+        "slot_depth_mm": 20,
+        "mount_hole_diameter_mm": 4.5,
+        "mount_hole_spacing_mm": 60
+      },
+      "material": {
+        "recommended": "PETG",
+        "alternatives": ["PLA+ (indoor use only)", "ASA (outdoor/UV resistant)"],
+        "color_suggestion": "Black"
+      },
+      "hardware_required": {
+        "threaded_inserts": "M4 × 6mm brass heat-set inserts × 2 per bracket",
+        "d_rings": "25mm stainless D-ring × 1 per bracket",
+        "screws": "M4 × 12mm stainless cap head × 2 per bracket"
+      },
+      "print_settings": {
+        "infill_percent": 60,
+        "infill_pattern": "rectilinear",
+        "layer_height_mm": 0.15,
+        "wall_count": 5,
+        "top_bottom_layers": 5,
+        "nozzle_temp_celsius": 240,
+        "bed_temp_celsius": 80,
+        "print_speed_mm_s": 40,
+        "cooling_fan_percent": 50,
+        "support": false,
+        "brim_mm": 0
+      },
+      "estimated_print_time_minutes": 45,
+      "filament_usage_grams": 22
+    },
+    {
+      "id": "zipper-pull",
+      "name": "Zipper Pull Tab",
+      "description": "Ergonomic teardrop-shaped zipper pull for the dual YKK #8 sliders. The flexible TPU allows easy grip in cold or wet conditions. Fits standard YKK #8 slider hole.",
+      "quantity_per_unit": 2,
+      "dimensions": {
+        "length_mm": 38,
+        "width_mm": 26,
+        "thickness_mm": 8,
+        "slot_width_mm": 6,
+        "slot_height_mm": 4,
+        "attachment_loop_inner_mm": 7
+      },
+      "material": {
+        "recommended": "TPU 85A",
+        "alternatives": ["TPU 95A (stiffer)", "Nylon PA12 (rigid)"],
+        "color_suggestion": "Blue or brand accent color"
+      },
+      "print_settings": {
+        "infill_percent": 40,
+        "infill_pattern": "gyroid",
+        "layer_height_mm": 0.2,
+        "wall_count": 4,
+        "top_bottom_layers": 4,
+        "nozzle_temp_celsius": 220,
+        "bed_temp_celsius": 50,
+        "print_speed_mm_s": 18,
+        "cooling_fan_percent": 25,
+        "extruder": "direct drive required",
+        "support": false,
+        "brim_mm": 4
+      },
+      "estimated_print_time_minutes": 22,
+      "filament_usage_grams": 8
+    },
+    {
+      "id": "buckle-plate",
+      "name": "Chest Buckle Backing Plate",
+      "description": "Reinforcing plate that sits inside the bag shell behind the chest strap attachment point. Prevents tearing of the 600D polyester under load.",
+      "quantity_per_unit": 2,
+      "dimensions": {
+        "length_mm": 60,
+        "width_mm": 30,
+        "thickness_mm": 3,
+        "slot_width_mm": 20,
+        "slot_height_mm": 4,
+        "mount_hole_diameter_mm": 5
+      },
+      "material": {
+        "recommended": "PETG",
+        "alternatives": ["PLA+", "ASA"],
+        "color_suggestion": "Any (concealed inside bag)"
+      },
+      "print_settings": {
+        "infill_percent": 80,
+        "infill_pattern": "rectilinear",
+        "layer_height_mm": 0.2,
+        "wall_count": 5,
+        "top_bottom_layers": 5,
+        "nozzle_temp_celsius": 240,
+        "bed_temp_celsius": 80,
+        "print_speed_mm_s": 45,
+        "cooling_fan_percent": 50,
+        "support": false,
+        "brim_mm": 0
+      },
+      "estimated_print_time_minutes": 18,
+      "filament_usage_grams": 12
+    }
+  ],
+  "full_product_specs": {
+    "roller": {
+      "length_mm": 914,
+      "diameter_mm": 152,
+      "material": "EPP foam (Expanded Polypropylene)",
+      "density_kg_m3": 70,
+      "surface": "Ridged texture, 14 rings at 65mm spacing",
+      "core": "Hollow — 130mm inner diameter"
+    },
+    "bag_shell": {
+      "outer_material": "600D polyester with DWR coating",
+      "reinforcement_zones": "1000D nylon at corners and strap attachment areas",
+      "interior_lining": "210D nylon ripstop",
+      "capacity_liters": 8,
+      "max_load_kg": 11.3
+    },
+    "zippers": {
+      "brand": "YKK",
+      "model": "#8 coil",
+      "count": 2,
+      "type": "Water-resistant RC (reverse coil)",
+      "rating_cycles": 50000,
+      "length_mm": 900
+    },
+    "straps": {
+      "material": "1.5 inch (38mm) nylon webbing",
+      "padding_material": "6mm closed-cell EVA foam",
+      "padding_cover": "3D spacer mesh",
+      "adjustment": "Plastic ladder-lock buckles (PP, rated 80kg)",
+      "chest_strap": "1 inch (25mm) nylon with cam buckle",
+      "attachment": "25mm stainless steel D-rings × 4"
+    },
+    "hardware": {
+      "d_rings": "304 stainless steel, 25mm, × 4",
+      "buckles": "Polypropylene ladder-lock, × 4 (strap adjust) + 1 (chest)",
+      "rivets": "Stainless steel 4mm split rivets at all seam stress points"
+    },
+    "assembly": {
+      "total_weight_empty_kg": 0.95,
+      "colors_available": ["Charcoal Black", "Midnight Blue", "Storm Grey"],
+      "warranty_years": 2
+    }
+  }
+}
