@@ -842,7 +842,6 @@ section { padding: 100px 0; }
 }
 .proof-avatars {
   display: flex;
-  gap: -4px;
 }
 .avatar {
   width: 32px; height: 32px;
