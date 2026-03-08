@@ -14,11 +14,11 @@ const RIDGE_COUNT    = 14;
 const RIDGE_RADIUS   = 0.85;
 const CAP_THICKNESS  = 2.0;
 
-const C_CHARCOAL  = 0x1c2535;
-const C_DARK      = 0x141d2b;
+const C_CHARCOAL  = 0x2e4a6e;  // was 0x1c2535 — lightened for visibility on dark bg
+const C_DARK      = 0x1e3350;  // was 0x141d2b — ridge slightly darker than body
 const C_BLUE      = 0x0066ff;
 const C_SILVER    = 0xa8b4c4;
-const C_BLACK     = 0x0a0f18;
+const C_BLACK     = 0x182840;  // was 0x0a0f18 — strap visible but still dark
 const C_INTERIOR  = 0x1e3a5f;
 
 // ─── Scene builder ──────────────────────────────────────────────────────────
@@ -26,22 +26,22 @@ function buildScene() {
   const scene = new THREE.Scene();
   scene.background = null;
 
-  // Lighting
-  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+  // Lighting — boosted to ensure model is visible against dark background
+  scene.add(new THREE.AmbientLight(0xffffff, 1.2));  // was 0.5
 
-  const keyLight = new THREE.DirectionalLight(0xffffff, 1.8);
+  const keyLight = new THREE.DirectionalLight(0xffffff, 2.2);  // was 1.8
   keyLight.position.set(40, 80, 60);
   scene.add(keyLight);
 
-  const fillLight = new THREE.DirectionalLight(0x4488ff, 0.8);
+  const fillLight = new THREE.DirectionalLight(0x6699ff, 1.2);  // was 0.8
   fillLight.position.set(-60, 20, -40);
   scene.add(fillLight);
 
-  const rimLight = new THREE.DirectionalLight(0x00d4ff, 0.6);
+  const rimLight = new THREE.DirectionalLight(0x00d4ff, 0.9);  // was 0.6
   rimLight.position.set(0, -40, -60);
   scene.add(rimLight);
 
-  const pointAccent = new THREE.PointLight(C_BLUE, 1.2, 200);
+  const pointAccent = new THREE.PointLight(C_BLUE, 1.8, 300);  // was 1.2, 200
   pointAccent.position.set(0, 60, 60);
   scene.add(pointAccent);
 
@@ -240,8 +240,9 @@ function setupInstance(canvasId, containerEl) {
 
   const { scene, root, interior, strapGroup } = buildScene();
 
-  let bagOpen     = false;
+  let bagOpen      = false;
   let openProgress = 0;
+  let firstFrame   = false;
 
   // Bug fix #1: ResizeObserver on the container (more reliable than window.resize)
   const ro = new ResizeObserver(() => {
@@ -271,12 +272,15 @@ function setupInstance(canvasId, containerEl) {
     }
 
     renderer.render(scene, camera);
+
+    // Hide SVG fallback only after first successful render frame
+    if (!firstFrame) {
+      firstFrame = true;
+      const fallback = containerEl.querySelector('.canvas-fallback');
+      if (fallback) fallback.style.display = 'none';
+    }
   }
   animate();
-
-  // Hide the static SVG fallback once Three.js is running
-  const fallback = containerEl.querySelector('.canvas-fallback');
-  if (fallback) fallback.style.display = 'none';
 
   return {
     renderer, camera, controls, scene, root, interior, strapGroup,
